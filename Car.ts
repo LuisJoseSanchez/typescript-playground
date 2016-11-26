@@ -5,12 +5,12 @@ export class Car {
     this.engine = engine;
   }
 
-  start() {
-    alert('Engine started: ' + this.engine);
+  public start() {
+    console.log('Engine started: ' + this.engine);
   }
 
 
-  stop() {
-    alert('Engine stoped: ' + this.engine);
+  public stop() {
+    console.log('Engine stoped: ' + this.engine);
   }
 }
