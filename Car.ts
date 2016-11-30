@@ -2,7 +2,7 @@ import { Engine } from './Engine';
 
 export class Car {
   engine: Engine;
-  accessoryList: string;
+  accessoryList: string = "";
 
   constructor(engine: Engine) {
     this.engine = engine;
@@ -15,5 +15,12 @@ export class Car {
 
   public stop() {
     console.log('Engine stoped: ' + this.engine.type);
+  }
+
+  addAccessories(...accessories) {
+    accessories.forEach(element => {
+      this.accessoryList += element;
+      this.accessoryList += ", ";
+    });
   }
 }
