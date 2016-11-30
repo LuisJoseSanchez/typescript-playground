@@ -1,16 +1,19 @@
-export class Car {
-  engine: string;
+import { Engine } from './Engine';
 
-  constructor(engine: string) {
+export class Car {
+  engine: Engine;
+  accessoryList: string;
+
+  constructor(engine: Engine) {
     this.engine = engine;
   }
 
   public start() {
-    console.log('Engine started: ' + this.engine);
+    console.log('Engine started: ' + this.engine.type);
   }
 
 
   public stop() {
-    console.log('Engine stoped: ' + this.engine);
+    console.log('Engine stoped: ' + this.engine.type);
   }
 }
