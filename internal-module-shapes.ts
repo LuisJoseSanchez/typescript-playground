@@ -18,5 +18,12 @@ namespace Shapes {
   }
 }
 
-var r1: Shapes.IRectangle = new Shapes.Rectangle(10, 20);
-console.log(r1.getArea());
+namespace MyProgram {
+  
+  export function run() {
+    var r1: Shapes.IRectangle = new Shapes.Rectangle(10, 20);
+    console.log(r1.getArea());
+  }
+}
+
+MyProgram.run();
