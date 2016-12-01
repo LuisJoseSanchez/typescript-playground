@@ -1,10 +1,11 @@
-interface IRectangle {
-  width: number;
-  height: number;
-  getArea(): number;
-}
-
 namespace Shapes {
+
+  export interface IRectangle {
+    width: number;
+    height: number;
+    getArea(): number;
+  }
+
   export class Rectangle implements IRectangle {
     constructor(public width: number, public height: number) {
       this.width = width;
@@ -17,6 +18,5 @@ namespace Shapes {
   }
 }
 
-var r1: IRectangle;
-r1 = new Shapes.Rectangle(10, 20);
+var r1: Shapes.IRectangle = new Shapes.Rectangle(10, 20);
 console.log(r1.getArea());
